@@ -24,11 +24,28 @@ from collections import Counter
 Counter(specieslist)
 
 #2c : get rows with Sepal.Width > 3.5
-print(iris.iloc[:,:]>3.5)
-    #count the number of true instances
-    
-    
+iris.loc[iris['Sepal.Width']>3.5]
     
 #2d : write the data for the species setosa to a comma-delimited file names ‘setosa.csv’
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #2e : calculate the mean, minimum, and maximum of Petal.Length for observations from virginica
