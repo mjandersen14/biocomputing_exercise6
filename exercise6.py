@@ -14,18 +14,21 @@ iris.shape
 iris.iloc[148:,3:]
 
 #2b : get the number of observations for each species included in the data set
-count=0
-cat while read line
-do
-    if echo $line | grep $stringChoice; then
-        count=$[ count + 1 ]
-done
-echo "Finished processing file"
 
+species=iris.iloc[:,4:]
+species.shape
+
+specieslist=iris['Species'].tolist()
+
+from collections import Counter
+Counter(specieslist)
 
 #2c : get rows with Sepal.Width > 3.5
-iris.iloc[:,1:2]>3.5
-
+print(iris.iloc[:,:]>3.5)
+    #count the number of true instances
+    
+    
+    
 #2d : write the data for the species setosa to a comma-delimited file names ‘setosa.csv’
 
 #2e : calculate the mean, minimum, and maximum of Petal.Length for observations from virginica
