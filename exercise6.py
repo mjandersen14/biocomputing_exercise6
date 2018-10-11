@@ -14,7 +14,6 @@ iris.shape
 iris.iloc[148:,3:]
 
 #2b : get the number of observations for each species included in the data set
-
 species=iris.iloc[:,4:]
 species.shape
 
@@ -27,25 +26,34 @@ Counter(specieslist)
 iris.loc[iris['Sepal.Width']>3.5]
     
 #2d : write the data for the species setosa to a comma-delimited file names ‘setosa.csv’
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+setosa=iris.loc[iris['Species']=='setosa']
+setosa.to_csv(path_or_buf='setosa.csv')
 
 #2e : calculate the mean, minimum, and maximum of Petal.Length for observations from virginica
+def iris_calcs():
+    virginica=iris[iris['Species']=='virginica']
+    petalL=virginica['Petal.Length']
+    minimmum=min (petalL)
+    maximmum=max (petalL) 
+    total=sum (petalL)
+    average=total/50
+   
+    return minimmum, maximmum, average
+
+iris_calcs()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
