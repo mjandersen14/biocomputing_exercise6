@@ -25,7 +25,7 @@ Counter(specieslist)
 #2c : get rows with Sepal.Width > 3.5
 iris.loc[iris['Sepal.Width']>3.5]
     
-#2d : write the data for the species setosa to a comma-delimited file names ‘setosa.csv’
+#2d : write the data for the species setosa to a comma-delimited file named setosa
 setosa=iris.loc[iris['Species']=='setosa']
 setosa.to_csv(path_or_buf='setosa.csv')
 
